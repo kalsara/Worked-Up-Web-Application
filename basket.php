@@ -17,17 +17,7 @@ echo "<h2>".$pagename."</h2>";
 //@$prodNameAdd=$_POST['h_prodName'];
 //@$prodpriceAdd=$_POST['h_prodPrice'];
 
-if(isset($_POST['stock'])){
-@$newprodid =$_POST['h_prodid'];
 
-@$reququantity =$_POST['stock'];
-
-
-@$_SESSION['basket'][$newprodid] =$reququantity;
-echo "<p> Your basket has been updated";
-print_r($_SESSION);
-
-}
 
 echo"<table border=1;>";
 echo"<tr>";
@@ -65,9 +55,7 @@ if (isset($_SESSION['basket'])) {
 	
       
 
-echo "<p><a href='clearbasket.php'>Clear Basket</a></p>";
-echo "<p>New workedUp customers<a href='register.php'>Register</a></p>";
-echo "<p>Registered workedUp members<a href='login.php'>Login</a></p>";
+
 
 //include head layout
 include("footfile.html");
