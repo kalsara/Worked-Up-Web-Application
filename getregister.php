@@ -24,23 +24,6 @@ $tp=$_POST['telNo'];
 $email=$_POST['eAddress'];
 $pass=$_POST['password'];
 $confirmPass=$_POST['conPassword'];
-if(empty($fName)||empty($lName)||empty($address)||empty($pcode)||empty($tp)||empty($email)||empty($pass)||empty($confirmPass) )
-{
-		echo "All fields are compulsory";
-	echo"<p>go back to</p><a href='register.php'>Register</a>";
-}else{
-	$reg = "/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/" ;
-	if(!(preg_match($reg,$email))){
-
-				echo "<p>Email not valid</p>";
-			echo "<p>go back top<a href='register.php'>Register</a></p>";
-	}else{
-
-		if($pass==$confirmPass)
-	{
-
-$sqlInfo="INSERT INTO users(UsersFName,UsersLName,UsersAddress,UsersPostCode,UsersTelNo,UsersEmail,UsersPassword) 
-VALUES ('".$fName."','".$lName."','".$address."','".$pcode."','".$tp."','".$email."','".$pass."')";
 
 //run SQL query
 @$run-mysqli_query($conn,$sqlInfo);
