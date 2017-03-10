@@ -10,25 +10,7 @@
     border-color: #9E9EAE;	
 } 
 
-#header
-{
-	background:#FFF;
-	padding: 5px;
-}
-
-#header h1
-{
-	margin: 0;
-	color:	#008F6B;
-	font-size: 90%;
-	text-align: right;
-}
-
-#navigation
-{
-	float: left;
-	width: 100%;
-	background:#9E9EAE;
+ground:#9E9EAE;
 }
 
 #navigation ul
