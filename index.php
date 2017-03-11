@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 session_start();
 
 //include a db.php file to connect to database
@@ -33,23 +33,7 @@ $result =mysqli_query($conn ,$sql) ;
 
 
    
-while ($row=mysqli_fetch_array($result ))
-   {
-	echo "<br>";
-	//make each product a link to the next page and pass the product id to the next page by URL
-//concatenate a string of characters u_prodid which carries the value of the actual id
-	echo "<p><a href=prodinfo.php?u_prodid=".$row['prodId'].">";
-	//Display name of the product
-	echo $row['prodName']."<br>";
-	echo "</a>";
 
-	echo "<img src=images/".$row['prodPicName'].">";
-	echo "<br>";
-	echo "£".$row["prodPrice"];
-
-	echo "<br><br>";
-	echo "<hr>";
-   }
 
 mysqli_close($conn);
 //include head layout
